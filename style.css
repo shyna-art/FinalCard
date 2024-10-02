@@ -1,0 +1,213 @@
+.header {
+    margin-top: -38px;
+    margin-left: -6px;
+    margin-right: -6px;
+    padding: 40px;
+    color: #fbffe3;
+    font-family: serif;
+    font-weight: 900;
+    background-image: linear-gradient(red, #660000);
+    letter-spacing: 0.4em;
+    font-size: 25px;
+    }
+    .main {
+    margin-top: -15px;
+    margin-left: -6px;
+    margin-right: -6px;
+    padding: 200px;
+    text-align: center;
+    color: #F3F8FF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(img/inferno.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    }
+    
+    :root {
+    --card-height: 300px;
+    --card-width: calc(var(--card-height) / 1.5);
+    }
+    * {
+    box-sizing: border-box;
+    }
+    .card {
+    
+    width: var(--card-width);
+    height: var(--card-height);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 0 36px;
+    perspective: 2500px;
+    margin: 0 50px;
+    }
+    
+    .wrapper {
+    transition: all 0.5s;
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+    }
+    .card:hover .wrapper {
+    transform: perspective(900px) translateY(-5%) rotateX(25deg) translateZ(0);
+    box-shadow: 10px 35px 32px -20px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 10px 35px 32px -20px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 35px 32px -20px rgba(0, 0, 0, 0.75);
+    }
+    .wrapper::before,
+    .wrapper::after {
+    content: "";
+    opacity: 0;
+    width: 100%;
+    height: 80px;
+    transition: all 0.5s;
+    position: absolute;
+    left: 0;
+    }
+    .wrapper::before {
+    top: 0;
+    height: 100%;
+    background-image: linear-gradient(
+    to top,
+    transparent 46%,
+    rgba(12, 13, 19, 0.5) 68%,
+    rgba(12, 13, 19) 97%
+    );
+    
+    }
+    .wrapper::after {
+    bottom: 0;
+    opacity: 1;
+    background-image: linear-gradient(
+    to bottom,
+    transparent 46%,
+    rgba(12, 13, 19, 0.5) 68%,
+    rgba(12, 13, 19) 97%
+    );
+    }
+    .card:hover .wrapper::before,
+    .wrapper::after {
+    opacity: 1;
+    }
+    .card:hover .wrapper::after {
+    height: 120px;
+    }
+    .cover-imageflash {
+    width: 200px;
+    height: 100%;
+    object-fit: cover;
+    }
+    .cover-imagenat {
+    width: 200px;
+    height: 100%;
+    object-fit: cover;
+    }
+    .cover-imageiron {
+    width: 195px;
+    height: 351px;
+    object-fit: cover;
+    }
+    .cover-imagewanda {
+    width: 200px;
+    height: 348px;
+    object-fit: cover;
+    }
+    .titleflash {
+    width: 220px;
+    margin-bottom: 5px;
+    
+    transition: transform 0.5s;
+    }
+    .titlenat {
+    width: 230px;
+    transition: transform 0.5s;
+    margin-bottom: 5px;
+    margin-right: 5px;
+    }
+    .titleiron {
+    width: 240px;
+    transition: transform 0.5s;
+    margin-bottom: 5px;
+    }
+    .titlescar {
+    width: 220px;
+    transition: transform 0.5s;
+    margin-bottom: 5px;
+    margin-right: 5px;
+    
+    }
+    .card:hover .titleflash {
+    transform: translate3d(0%, -50px, 100px);
+    }
+    .card:hover .titleiron {
+    transform: translate3d(0%, -50px, 100px);
+    }
+    .card:hover .titlenat {
+    transform: translate3d(0%, -50px, 100px);
+    }
+    .card:hover .titlescar {
+    transform: translate3d(0%, -50px, 100px);
+    }
+    .characterflash {
+    width: 210px;
+    opacity: 0;
+    transition: all 0.5s;
+    position: absolute;
+    z-index: -1;
+    }
+    .characterscar {
+    width: 210px;
+    
+    opacity: 0;
+    transition: all 0.5s;
+    position: absolute;
+    z-index: -1;
+    margin-bottom: -20px;
+    }
+    .card:hover .characterscar {
+    opacity: 1;
+    transform: translate3d(8%, -30%, 100px);
+    }
+    .characteriron {
+    width: 200px;
+    opacity: 0;
+    transition: all 0.5s;
+    position: absolute;
+    z-index: -1;
+    margin-bottom: -20px;
+    }
+    .characternat {
+    width: 200px;
+    opacity: 0;
+    transition: all 0.5s;
+    position: absolute;
+    z-index: -1;
+    margin-bottom: 20px;
+    }
+    .card:hover .characternat {
+    opacity: 1;
+    transform: translate3d(8%, -30%, 100px);
+    }
+    .card:hover .characteriron {
+    opacity: 1;
+    transform: translate3d(8%, -30%, 100px);
+    }
+    .card:hover .characterflash {
+    opacity: 1;
+    transform: translate3d(8%, -30%, 100px);
+    }
+    .footer {
+    margin-top: -47px;
+    
+    margin-left: -6px;
+    margin-right: -6px;
+    padding: 22px;
+    background-color: #355c7d;
+    color: #fbffe3;
+    font-family: serif;
+    background-image: linear-gradient(#660000, red);
+    }
